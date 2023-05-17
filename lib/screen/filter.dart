@@ -20,9 +20,8 @@ class _FilterState extends State<Filter> {
 
   String selectItemColor="color1";
   List<String> itemBrand=["brand1","brand2","brand3"];
-
   String selectItemBrand="brand1";
-
+  // nnbnvnv5555
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBarShow(context: context,title:  AppText.FilterAppBar),
