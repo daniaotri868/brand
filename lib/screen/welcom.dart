@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../Widget/CustomButton.dart';
 import '../Widget/CustomText.dart';
 import 'Sign_in.dart';
+import 'cart.dart';
 
 class welcom extends StatelessWidget {
   const welcom({Key? key}) : super(key: key);
@@ -24,7 +25,9 @@ class welcom extends StatelessWidget {
             Navigator.push(context, MaterialPageRoute(builder: (context) => Sign_in(),));
           }),
           SizedBox(height: 20.h,),
-          CustomButton(color: silverLight, text: AppText.WelcomAccount,colorText: Colors.black,width: 361.0,onpress: (){}),
+          CustomButton(color: silverLight, text: AppText.WelcomAccount,colorText: Colors.black,width: 361.0,onpress: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Cart(),));
+          }),
           TextButton(onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => viewProdact(),));
           }, child: CustomText(text: AppText.WelcomContinuet,color: Silver,size: 17.sp)),

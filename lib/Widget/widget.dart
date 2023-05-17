@@ -7,7 +7,7 @@ import 'CustomAppBarBack.dart';
 import 'CustomText.dart';
 
 
-AppBar AppBarShow({context,title})=> AppBar(
+AppBar AppBarShow({context,title,action})=> AppBar(
   automaticallyImplyLeading: false,
   toolbarHeight: 95.h,
   backgroundColor: pink,
@@ -22,7 +22,7 @@ AppBar AppBarShow({context,title})=> AppBar(
   actions: [
     Padding(
     padding: REdgeInsetsDirectional.only(end: 21,top: 52,bottom: 12),
-    child: CustomAppBarBack(context: context),
+    child: action,
     )
   ],
 );

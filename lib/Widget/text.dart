@@ -13,7 +13,7 @@ class AppText
   static final  ViewCream=" Creamy basic Hoodie";
   static final  Viewicon1=" Pull&Bear";
   static final  Viewicon2=" Black";
-  static final  ViewMony=" 275.000";
+  static final  ViewMony=" 275.000 ";
   static final  ViewSYP=" SYP";
   static const  ViewInformation="Information you should know";
   static const  ViewInformation1="Deliveries take between 15 - 25 days";
@@ -31,6 +31,17 @@ class AppText
   static const  DialogBack="Back";
   static const  DialogDone="Done";
   static const  DialogTitle="  Choose Size and Color";
+  static const  CartAppbar="  Choose Size and Color";
+  static const  CartPurchases="Purchases";
+  static const  CartTitle="Creamy basic Hoodie";
+  static const  CartSubTitle1="Black";
+  static const  CartSubTitle2="Large";
+  static const  CartMony="275.000 ";
+  static const  CartSYP="SYP ";
+
+
+
+
 
 
 

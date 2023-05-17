@@ -4,6 +4,7 @@ import 'package:brand/Widget/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../Widget/CustomAppBarBack.dart';
 import '../Widget/CustomButton.dart';
 import '../Widget/CustomText.dart';
 import '../const/const.dart';
@@ -24,7 +25,7 @@ class _FilterState extends State<Filter> {
   // nnbnvnv5555
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBarShow(context: context,title:  AppText.FilterAppBar),
+      appBar:AppBarShow(context: context,title:  AppText.FilterAppBar,action: CustomAppBarBack(context: context)),
       body: Padding(
         padding: REdgeInsetsDirectional.only(start: 21,end: 25,bottom: 97),
         child: Column(

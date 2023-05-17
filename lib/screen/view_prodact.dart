@@ -9,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../Widget/CustomAppBarBack.dart';
 import '../Widget/CustomButton.dart';
+import '../Widget/CustomContainerMony.dart';
 import '../Widget/CustomCycle.dart';
 import '../Widget/CustomItemListView.dart';
 import '../Widget/CustomRowIcon.dart';
@@ -115,22 +116,7 @@ class viewProdact extends StatelessWidget {
 
                   ],),
                   13.verticalSpace,
-                  Container(
-                    height: 31.h,
-                    width: 130.w,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(7),
-                      color: silverLight,
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CustomText(text: AppText.ViewMony,color: pink,size: 17.sp),
-                        CustomText(text: AppText.ViewSYP,color: Colors.black,size: 17.sp),
-                      ],
-                    ),
-                  ),
+                  CustomConntainerMony(text1: AppText.ViewMony,text2: AppText.ViewSYP),
                   15.verticalSpace,
                   CustomText(text: AppText.ViewInformation,color: Colors.black,size: 17.sp),
                   8.verticalSpace,
@@ -146,7 +132,7 @@ class viewProdact extends StatelessWidget {
                     height: 232,
                     child: ListView.separated(
                         scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) =>const CustomItemList(
+                        itemBuilder: (context, index) => CustomItemList(
                             image: 'assets/images/girl1.png',
                             text1: AppText.ViewListDetail1,
                             text2: AppText.ViewListDetail2,
