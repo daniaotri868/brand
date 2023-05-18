@@ -38,6 +38,15 @@ class AppText
   static const  CartSubTitle2="Large";
   static const  CartMony="275.000 ";
   static const  CartSYP="SYP ";
+  static const  CartTotalPrice="Total Price ";
+  static const  CartNavMony="  2.250.500  SYP";
+  static const  CartNavButtomCheck="Check out";
+
+
+
+
+
+
 
 
 

@@ -20,48 +20,45 @@ class CustomItemCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: REdgeInsetsDirectional.only(start: 21),
+      padding: REdgeInsetsDirectional.only(start: 21,end: 21,top: 26),
       color: Colors.white,
       width: double.infinity,
-      child: Padding(
-        padding: REdgeInsetsDirectional.only(start: 21,end: 21,top: 26),
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Image.asset(image),
-            12.horizontalSpace,
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomText(text: Title,size: 15.sp,color: Colors.black,),
-                Row(
-                  children: [
-                    CustomText(text: SubTitle1,size: 15.sp,color: Silver,),
-                    CustomText(text:" _ ",size: 15.sp,color: Silver,),
-                    CustomText(text: SubTitle2,size: 15.sp,color: Silver,),
-                  ],
-                ),
-                Padding(
-                  padding: REdgeInsetsDirectional.only(top:  34),
-                  child: CustomConntainerMony(text1: mony,text2: syp),
-                ),
-
-
-              ],
-            ),
-            Spacer(),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: pink.withOpacity(0.1),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Image.asset(image),
+          12.horizontalSpace,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CustomText(text: Title,size: 15.sp,color: Colors.black,),
+              Row(
+                children: [
+                  CustomText(text: SubTitle1,size: 15.sp,color: Silver,),
+                  CustomText(text:" _ ",size: 15.sp,color: Silver,),
+                  CustomText(text: SubTitle2,size: 15.sp,color: Silver,),
+                ],
+              ),
+              Padding(
+                padding: REdgeInsetsDirectional.only(top:  34),
+                child: CustomConntainerMony(text1: mony,text2: syp),
               ),
 
-              child: IconButton(onPressed: () {
 
-              }, icon: Icon(Icons.delete,color: pink,size: 22,)),
-            )
-          ],
-        ),
+            ],
+          ),
+          Spacer(),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(7),
+              color: pink.withOpacity(0.1),
+            ),
+
+            child: IconButton(onPressed: () {
+
+            }, icon: Icon(Icons.delete,color: pink,size: 22,)),
+          )
+        ],
       ),
     );
   }
