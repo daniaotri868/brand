@@ -24,6 +24,8 @@ class CustomItemCart extends StatelessWidget {
       color: Colors.white,
       width: double.infinity,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: [
           Image.asset(image),
@@ -49,14 +51,14 @@ class CustomItemCart extends StatelessWidget {
           ),
           Spacer(),
           Container(
+            height: 28.h,
+            width: 27.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               color: pink.withOpacity(0.1),
             ),
 
-            child: IconButton(onPressed: () {
-
-            }, icon: Icon(Icons.delete,color: pink,size: 22,)),
+            child:Icon(Icons.delete,color: pink,size: 15,)
           )
         ],
       ),
