@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../Widget/CustomButton.dart';
 import '../Widget/CustomText.dart';
-import 'Sign_in.dart';
+import 'login/Sign_in.dart';
 import 'cart.dart';
 
 class welcom extends StatelessWidget {

@@ -42,7 +42,7 @@ class _CartState extends State<Cart> {
                 });
               },
               currentIndex:index ,
-              items: [
+              items: const [
                 BottomNavigationBarItem(
                     icon: Icon(Icons.home_outlined),
                     label: ""

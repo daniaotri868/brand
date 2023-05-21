@@ -21,4 +21,6 @@ class AppCubit extends Cubit<AppState> {
     currentIndexCycle=index;
     emit(AppChangeIndexCycle());
   }
+
+
 }
