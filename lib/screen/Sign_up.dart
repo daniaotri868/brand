@@ -1,6 +1,11 @@
+import 'package:brand/screen/address.dart';
+import 'package:brand/screen/login/Sign_in.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:intl_phone_field/country_picker_dialog.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import '../Widget/CustomButton.dart';
 import '../Widget/CustomButtonBack.dart';
 import '../Widget/CustomText.dart';
@@ -8,19 +13,24 @@ import '../Widget/customTextField.dart';
 import '../Widget/text.dart';
 import '../const/const.dart';
 import '../cubit/app_cubit.dart';
-import 'login/cubit_login/log_cubit.dart';
+
 
 class SignUp extends StatelessWidget {
    SignUp({Key? key}) : super(key: key);
 
-  @override
   final PasswordFoucs=FocusNode();
-  final NameFoucs=FocusNode();
-  TextEditingController controllerName=TextEditingController();
+  final ConfirmPasswordFoucs=FocusNode();
+  final FirstNameFoucs=FocusNode();
+  final LastNameFoucs=FocusNode();
+  TextEditingController controllerFirstName=TextEditingController();
+  TextEditingController controllerLastName=TextEditingController();
   TextEditingController controllerPassword=TextEditingController();
+  TextEditingController controllerConfirmPassword=TextEditingController();
   final fromKey=GlobalKey<FormState>();
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return  BlocBuilder<AppCubit, AppState>(
+  builder: (context, state) {
+    return SafeArea(
       child: Scaffold(
           resizeToAvoidBottomInset: false,
           body: Form(
@@ -32,25 +42,86 @@ class SignUp extends StatelessWidget {
                   padding:  REdgeInsetsDirectional.only(end: 33,start: 33),
                   child: Column(
                     children: [
-                      const Spacer(),
-                      Image.asset('assets/images/Group 194.png',width: 168.63.w,height: 55.87.h,),
+                      const Spacer(flex: 2),
+                      Image.asset('assets/images/signUp.png',width: 168.63.w,height: 55.87.h,),
                       const Spacer(),
                       CustomTextField(
-                        hint_text: AppText.SignHintName,
+                        hint_text: AppText.SignUpFirstName,
                         suffix: false,
                         suffix_icon: null,
-                        controller:controllerName ,
+                        controller:controllerFirstName,
                         keyboard: TextInputType.name,
-                        PasswordFoucs: PasswordFoucs,
+                        PasswordFoucs: FirstNameFoucs,
                         obsc:false,
                         validate:  (value) {
                           if(value!.isEmpty)
                           {
-                            NameFoucs.requestFocus();
+                            FirstNameFoucs.requestFocus();
                             return "Please make sure the password or user name you are entering is correct";
                           }
 
                         },
+                      ),
+                      18.verticalSpace,
+                      CustomTextField(
+                        hint_text: AppText.SignUpLastName,
+                        suffix: false,
+                        suffix_icon: null,
+                        controller:controllerLastName ,
+                        keyboard: TextInputType.name,
+                        PasswordFoucs: LastNameFoucs,
+                        obsc:false,
+                        validate:  (value) {
+                          if(value!.isEmpty)
+                          {
+                            LastNameFoucs.requestFocus();
+                            return "Please make sure the password or user name you are entering is correct";
+                          }
+
+                        },
+                      ),
+                      18.verticalSpace,
+                      IntlPhoneField(
+                        flagsButtonPadding: REdgeInsetsDirectional.all(13.4),
+                        initialCountryCode: "SY",
+                        showCountryFlag: false,
+                        dropdownIcon: Icon(Icons.keyboard_arrow_down_rounded,color: pink),
+                         pickerDialogStyle:PickerDialogStyle(
+
+                         ) ,
+                         showDropdownIcon: true,
+                        dropdownIconPosition: IconPosition.trailing,
+                        //textInputAction:TextInputAction.send ,
+
+                        decoration: InputDecoration(
+                          counterText: "",
+
+                          suffixIcon:  const VerticalDivider(
+                            color: Colors.black,
+                            thickness: 1,
+                          ),
+                          filled: true,
+                          fillColor: silverLight,
+                          hintText: AppText.SignUpPhoneNumberHint,
+                          hintStyle: TextStyle(fontSize: 17.sp,color: Silver),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: BorderSide(color: silverLight)
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: BorderSide(color: silverLight)
+                          ),
+                          enabledBorder:OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: BorderSide(color: silverLight)
+                          ),
+                        ),
+
+
+
+
+
                       ),
                       18.verticalSpace,
                       CustomTextField(
@@ -73,6 +144,24 @@ class SignUp extends StatelessWidget {
 
                         },
                       ),
+                      18.verticalSpace,
+                      CustomTextField(
+                        hint_text: AppText.SignUpConfirm,
+                        suffix: false,
+                        suffix_icon: null,
+                        controller:controllerConfirmPassword ,
+                        keyboard: TextInputType.visiblePassword,
+                        PasswordFoucs: ConfirmPasswordFoucs,
+                        obsc:false,
+                        validate:  (value) {
+                          if(value!.isEmpty)
+                          {
+                            ConfirmPasswordFoucs.requestFocus();
+                            return "Please make sure the password or user name you are entering is correct";
+                          }
+
+                        },
+                      ),
                       const Spacer(flex: 3),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,18 +170,26 @@ class SignUp extends StatelessWidget {
                         children: [
                           Flexible(
                             flex: 1,
-                            child: CustomButtonBack(context: context,colorIcon: pink,colorGround: silverLight,width: 68.0,heigh: 59.0,size: 23.0),
+                            child: CustomButtonBack(context: context,
+                                colorIcon: pink,
+                                colorGround: silverLight,
+
+                               heigh: 59.0,
+                                size: 23.0,
+                                 //onpressed: Navigator.push(context, MaterialPageRoute(builder: (context) => welcom(),)),
+
+                            ),
                           ),
                           5.horizontalSpace,
                           Flexible(
-                            flex: 3,
+                            flex: 4,
                             child: CustomButton(
-                                color: pink,text: AppText.SingnNext,colorText: Colors.white,width: 286.0,onpress: (){
-                              if(fromKey.currentState!.validate())
-                              {
-
+                                color: pink,text: AppText.SingnNext,colorText: Colors.white,onpress: (){
+                              // if(fromKey.currentState!.validate())
+                              // {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Address(),));
                                 // ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("تم")));
-                              }
+                              // }
                             }
                             ),
                           )
@@ -104,15 +201,8 @@ class SignUp extends StatelessWidget {
                           CustomText(text: AppText.SignHaveAccount,size: 17.sp,color: Silver),
                           TextButton(onPressed: () {
                             print("here");
-                            LogCubit.get(context).SetUser(
-                                id: 1,
-                                FirstName: "sam",
-                                lastName: "otri",
-                                DialCode: "+963",
-                                CityId: 1,
-                                PhoneNumber:"958450946"
-                            );
-                          }, child: CustomText(text: AppText.SignSingnUp,size: 17.sp,color: pink)
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => Sign_in(),));
+                          }, child: CustomText(text: AppText.SignUpLoginText,size: 17.sp,color: pink)
                           )
                         ],
                       ),
@@ -126,5 +216,7 @@ class SignUp extends StatelessWidget {
           )
       ),
     );
+  },
+);
   }
 }

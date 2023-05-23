@@ -1,7 +1,6 @@
 import 'package:brand/Widget/text.dart';
 import 'package:brand/cubit/app_cubit.dart';
 import 'package:brand/screen/Sign_up.dart';
-import 'package:brand/screen/login/cubit_login/log_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,13 +23,11 @@ class Sign_in extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-  create: (context) => LogCubit(),
-  child: BlocConsumer<LogCubit, LogState>(
-    listener: (context, state) {
+     create: (context) => AppCubit(),
+     child: BlocBuilder<AppCubit, AppState>(
 
-    },
-    builder: (context, state) {
-    return SafeArea(
+     builder: (context, state) {
+     return SafeArea(
       child: Scaffold(
           resizeToAvoidBottomInset: false,
           body: Form(
@@ -85,19 +82,24 @@ class Sign_in extends StatelessWidget {
                       ),
                       const Spacer(flex: 3),
                       Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Flexible(
                             flex: 1,
-                            child: CustomButtonBack(context: context,colorIcon: pink,colorGround: silverLight,width: 68.0,heigh: 59.0,size: 23.0),
+                            child: CustomButtonBack(context: context,colorIcon: pink,colorGround: silverLight,heigh: 59.0,size: 23.0),
                           ),
-                          5.horizontalSpace,
+                          8.horizontalSpace,
                           Flexible(
-                            flex: 3,
+                            flex: 4,
                             child: CustomButton(
-                                color: pink,text: AppText.SingnNext,colorText: Colors.white,width: 286.0,onpress: (){
+                                color: pink,text: AppText.SingnNext,colorText: Colors.white,onpress: (){
+                              // if (context.locale.languageCode == 'en') {
+                              //   context.setLocale(Locale('ar', 'AR'));
+                              // } else {
+                              //   context.setLocale(Locale('en', 'US'));
+                              // }
                               if(fromKey.currentState!.validate())
                               {
 
@@ -128,8 +130,6 @@ class Sign_in extends StatelessWidget {
                         ],
                       ),
                       const Spacer(),
-
-
                     ],),
                 ),
               ],

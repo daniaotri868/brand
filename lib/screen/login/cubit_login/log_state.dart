@@ -8,6 +8,5 @@ class LogSuccessfulState extends LogState {}
 class LogLoadingState extends LogState {}
 class LogErrorState extends LogState {
   final String error;
-
   LogErrorState(this.error);
 }

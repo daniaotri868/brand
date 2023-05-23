@@ -8,14 +8,14 @@ import 'CustomContainerMony.dart';
 import 'CustomText.dart';
 
 class CustomItemCart extends StatelessWidget {
-  final image;
-  final Title;
-  final SubTitle1;
-  final SubTitle2;
-  final mony;
-  final syp;
+  final String image;
+  final String Title;
+  final String SubTitle1;
+  final String SubTitle2;
+  final String mony;
+  final String syp;
 
-   CustomItemCart({Key? key, this.image, this.Title, this.SubTitle1, this.SubTitle2, this.mony, this.syp}) : super(key: key);
+   CustomItemCart({Key? key, required this.image, required this.Title, required this.SubTitle1, required this.SubTitle2, required this.mony, required this.syp}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,13 +43,13 @@ class CustomItemCart extends StatelessWidget {
               ),
               Padding(
                 padding: REdgeInsetsDirectional.only(top:  34),
-                child: CustomConntainerMony(text1: mony,text2: syp),
+                child: CustomContainerMony(text1: mony,text2: syp),
               ),
 
 
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Container(
             height: 28.h,
             width: 27.w,

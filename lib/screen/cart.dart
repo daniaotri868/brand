@@ -14,7 +14,6 @@ class Cart extends StatefulWidget {
 }
 
 class _CartState extends State<Cart> {
-  @override
   int index=0;
 
   Widget build(BuildContext context) {
@@ -71,7 +70,7 @@ class _CartState extends State<Cart> {
       ),
       appBar: AppBarShow(
           context: context,
-          title: CustomText(text: AppText.CartAppbar,color: Colors.white,size: 20.sp,),
+          title:AppText.CartAppbar ,
           action: Container(
             height: 28.h,
             width: 131.w,

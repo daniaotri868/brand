@@ -1,5 +1,3 @@
-
-
 import 'package:dio/dio.dart';
 
 class dioHelper
@@ -9,7 +7,6 @@ class dioHelper
   static init()
   {
     dio=Dio(
-
        BaseOptions(
             baseUrl:'http://52.91.25.191:85/' ,
             receiveDataWhenStatusError: true,

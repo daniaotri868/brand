@@ -18,11 +18,12 @@ class Filter extends StatefulWidget {
 
 class _FilterState extends State<Filter> {
   List<String> itemColor=["color1","color2","color3"];
-
   String selectItemColor="color1";
   List<String> itemBrand=["brand1","brand2","brand3"];
   String selectItemBrand="brand1";
   // nnbnvnv5555
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBarShow(context: context,title:  AppText.FilterAppBar,action: CustomAppBarBack(context: context)),
@@ -64,9 +65,6 @@ class _FilterState extends State<Filter> {
                 ),
               ],
             ),
-
-
-
             const Spacer(),
             CustomButton(text: AppText.FilterSearchButton,color: pink,onpress: (){},colorText: Colors.white)
           ],

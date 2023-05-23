@@ -7,9 +7,9 @@ import 'CustomText.dart';
 
 class CustomDropButton extends StatelessWidget {
   final selectItem;
-  final itemeList;
-  final hint;
-  const CustomDropButton({Key? key, required this.selectItem, this.itemeList, this.hint}) : super(key: key);
+  final List itemeList;
+  final String hint;
+  const CustomDropButton({Key? key, required this.selectItem, required this.itemeList, required this.hint}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class CustomDropButton extends StatelessWidget {
             isDense: true,
             alignment: Alignment.centerLeft,
             // isDense: true,
-            hint:  Text(hint,style: TextStyle(color: Colors.black)),
+            hint:  Text(hint,style: const TextStyle(color: Colors.black)),
             icon: Icon(Icons.keyboard_arrow_down_rounded,color: pink),
             iconSize:22,
             decoration: InputDecoration(

@@ -9,7 +9,6 @@ class LogCubit extends Cubit<LogState> {
   LogCubit() : super(LogInitial());
   static LogCubit get(context)=>BlocProvider.of(context);
 
-int x=5;
   void SetUser({
   required String  FirstName,
   required String lastName,
@@ -39,7 +38,7 @@ int x=5;
        'ProfileImage':ProfileImage,
      }
      ).then((value) {
-       print("sucessful");
+       print("successful");
       print("Successful =${value.data}");
       emit(LogSuccessfulState());
      }).catchError((error){
