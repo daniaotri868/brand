@@ -4,12 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButtonBack extends StatelessWidget {
   final context;
-  final colorIcon;
-  final colorGround;
-  final width;
-  final heigh;
-  final size;
-  const CustomButtonBack( {Key? key, this.context, this.colorIcon, this.colorGround, this.width, this.heigh, this.size}) : super(key: key);
+  final Color colorIcon;
+  final Color colorGround;
+  final double ?width;
+  final double heigh;
+  final double size;
+  final Function ?onpressed;
+  const CustomButtonBack( {Key? key, this.context, required this.colorIcon, required this.colorGround,  this.width, required this.heigh, required this.size,  this.onpressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

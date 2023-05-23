@@ -3,13 +3,19 @@ class AppText
   static final  WelcomSignin="Sign in";
   static final  WelcomAccount="Create account";
   static final  WelcomContinuet="continue as aguest";
+
+
   static final  LoadingPowered="Powered byt";
   static final  LoadingAsseebled="Assembled Company";
+
+
   static final  SingnNext="Next";
   static final  SignHaveAccount="Don't have account ?";
   static final  SignSingnUp="Sign Up";
   static final  SignHintName="Name";
   static final  SignHintPassword="Password";
+
+
   static final  ViewCream=" Creamy basic Hoodie";
   static final  Viewicon1=" Pull&Bear";
   static final  Viewicon2=" Black";
@@ -25,13 +31,19 @@ class AppText
   static const  ViewListDetail3="Zara";
   static const  ViewButtonContact="Contact us";
   static const  ViewButtonAdd="Add to cart";
+
+
   static const  FilterAppBar="Filters";
   static const  FilterDelete="Delete";
   static const  FilterSearchButton="Search";
+
+
   static const  DialogBack="Back";
   static const  DialogDone="Done";
   static const  DialogTitle="  Choose Size and Color";
-  static const  CartAppbar="  Choose Size and Color";
+
+
+  static const  CartAppbar="  Cart";
   static const  CartPurchases="Purchases";
   static const  CartTitle="Creamy basic Hoodie";
   static const  CartSubTitle1="Black";
@@ -41,6 +53,20 @@ class AppText
   static const  CartTotalPrice="Total Price ";
   static const  CartNavMony="  2.250.500  SYP";
   static const  CartNavButtomCheck="Check out";
+
+
+  static const  SignUpFirstName="First Name";
+  static const  SignUpLastName="Last Name";
+  static const  SignUpConfirm="Confirm Password";
+  static const  SignUpLoginText="Login in";
+  static const  SignUpPhoneNumberHint="Phone Number";
+
+
+
+  static const  AddressHint="Address";
+  static const  AddressStreetHint="Street";
+  static const  AddressCityHint="City";
+
 
 
 

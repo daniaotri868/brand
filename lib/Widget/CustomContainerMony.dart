@@ -6,10 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../const/const.dart';
 import 'CustomText.dart';
 
-class CustomConntainerMony extends StatelessWidget {
-  final text1;
-  final text2;
-  const CustomConntainerMony({Key? key, this.text1, this.text2}) : super(key: key);
+class CustomContainerMony extends StatelessWidget {
+  final String text1;
+  final  String text2;
+  const CustomContainerMony({Key? key, required this.text1, required this.text2}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class CustomConntainerMony extends StatelessWidget {
       height: 31.h,
       width: 130.w,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(7),
+        borderRadius: BorderRadius.circular(7.r),
         color: silverLight,
       ),
       child: Row(

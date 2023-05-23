@@ -5,9 +5,9 @@ import '../const/const.dart';
 import 'CustomText.dart';
 
 class CustomRowIcon extends StatelessWidget {
-  final text;
-  final image;
-  const CustomRowIcon({Key? key, this.text, this.image}) : super(key: key);
+  final String text;
+  final String image;
+  const CustomRowIcon({Key? key, required this.text, required this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

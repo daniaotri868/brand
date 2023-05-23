@@ -85,19 +85,19 @@ class Sign_in extends StatelessWidget {
                       ),
                       const Spacer(flex: 3),
                       Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Flexible(
                             flex: 1,
-                            child: CustomButtonBack(context: context,colorIcon: pink,colorGround: silverLight,width: 68.0,heigh: 59.0,size: 23.0),
+                            child: CustomButtonBack(context: context,colorIcon: pink,colorGround: silverLight,heigh: 59.0,size: 23.0),
                           ),
-                          5.horizontalSpace,
+                          8.horizontalSpace,
                           Flexible(
-                            flex: 3,
+                            flex: 4,
                             child: CustomButton(
-                                color: pink,text: AppText.SingnNext,colorText: Colors.white,width: 286.0,onpress: (){
+                                color: pink,text: AppText.SingnNext,colorText: Colors.white,onpress: (){
                               if(fromKey.currentState!.validate())
                               {
 

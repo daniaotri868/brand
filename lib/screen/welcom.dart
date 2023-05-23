@@ -21,11 +21,11 @@ class welcom extends StatelessWidget {
           const Spacer(),
           // SizedBox(height: 82.h,),
           Image.asset('assets/images/Video_3.png'),
-          CustomButton(color: pink,text: AppText.WelcomSignin,width: 361.0, colorText: Colors.white,onpress: (){
+          CustomButton(color: pink,text: AppText.WelcomSignin,width: 361.w, colorText: Colors.white,onpress: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => Sign_in(),));
           }),
-          SizedBox(height: 20.h,),
-          CustomButton(color: silverLight, text: AppText.WelcomAccount,colorText: Colors.black,width: 361.0,onpress: (){
+          20.verticalSpace,
+          CustomButton(color: silverLight, text: AppText.WelcomAccount,colorText: Colors.black,width: 361.w,onpress: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => Cart(),));
           }),
           TextButton(onPressed: () {

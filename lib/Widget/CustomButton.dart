@@ -3,12 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
 
-  final  width;
-  final onpress;
-  final color;
-  final colorText;
-  final text;
-  const CustomButton({Key? key,  this.width, this.onpress, this.color, this.colorText, this.text}) : super(key: key);
+  final double ?width;
+  final  onpress;
+  final Color color;
+  final Color colorText;
+  final String text;
+   CustomButton({Key? key,  this.width, this.onpress, required this.color, required this.colorText, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +19,9 @@ class CustomButton extends StatelessWidget {
           style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color) ),
           onPressed:onpress, child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(8.r),
         ),
-
-
-               child: Center(child: Text("$text",style: TextStyle(color: colorText),)),
+               child: Center(child: Text(text,style: TextStyle(color: colorText),)),
 
       )),
     );

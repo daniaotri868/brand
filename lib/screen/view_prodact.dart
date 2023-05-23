@@ -116,7 +116,7 @@ class viewProdact extends StatelessWidget {
 
                   ],),
                   13.verticalSpace,
-                  CustomConntainerMony(text1: AppText.ViewMony,text2: AppText.ViewSYP),
+                  CustomContainerMony(text1: AppText.ViewMony,text2: AppText.ViewSYP),
                   15.verticalSpace,
                   CustomText(text: AppText.ViewInformation,color: Colors.black,size: 17.sp),
                   8.verticalSpace,
@@ -132,7 +132,7 @@ class viewProdact extends StatelessWidget {
                     height: 232,
                     child: ListView.separated(
                         scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) => CustomItemList(
+                        itemBuilder: (context, index) => const CustomItemList(
                             image: 'assets/images/girl1.png',
                             text1: AppText.ViewListDetail1,
                             text2: AppText.ViewListDetail2,

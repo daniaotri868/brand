@@ -6,11 +6,11 @@ import '../const/const.dart';
 import 'CustomText.dart';
 
 class CustomItemList extends StatelessWidget {
-  final image;
-  final text1;
-  final text2;
-  final text3;
-  const CustomItemList({Key? key, this.image, this.text1, this.text2, this.text3}) : super(key: key);
+  final String image;
+  final String  text1;
+  final String  text2;
+  final String  text3;
+  const CustomItemList({Key? key, required this.image, required this.text1, required this.text2, required this.text3}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
