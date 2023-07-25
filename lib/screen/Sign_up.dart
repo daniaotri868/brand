@@ -2,7 +2,10 @@ import 'package:brand/screen/address.dart';
 import 'package:brand/screen/login/Sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+<<<<<<< HEAD
 import 'package:flutter_bloc/flutter_bloc.dart';
+=======
+>>>>>>> origin/main
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl_phone_field/country_picker_dialog.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
@@ -123,6 +126,10 @@ class SignUp extends StatelessWidget {
 
 
                       ),
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
                       18.verticalSpace,
                       CustomTextField(
                         hint_text: AppText.SignHintPassword,

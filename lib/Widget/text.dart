@@ -68,6 +68,7 @@ class AppText
   static const  AddressCityHint="City";
 
 
+<<<<<<< HEAD
   static const  NotiGetNotified=" Get notified with our latest offers and discounts";
   static const  NotiButton1="Enable Notification";
   static const  NotiButton2="Not Now";
@@ -94,6 +95,8 @@ class AppText
 
 
 
+=======
+>>>>>>> origin/main
 
 
 

@@ -95,11 +95,14 @@ class Sign_in extends StatelessWidget {
                             flex: 4,
                             child: CustomButton(
                                 color: pink,text: AppText.SingnNext,colorText: Colors.white,onpress: (){
+<<<<<<< HEAD
                               // if (context.locale.languageCode == 'en') {
                               //   context.setLocale(Locale('ar', 'AR'));
                               // } else {
                               //   context.setLocale(Locale('en', 'US'));
                               // }
+=======
+>>>>>>> origin/main
                               if(fromKey.currentState!.validate())
                               {
 

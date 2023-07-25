@@ -8,6 +8,10 @@ class CustomText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Text(text,style: TextStyle(fontSize: size,color: color,fontFamily: 'Poppins'),);
+=======
+    return Text(text,style: TextStyle(fontSize: size,color: color,fontFamily: ''),);
+>>>>>>> origin/main
   }
 }

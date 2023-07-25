@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return ScreenUtilInit(
       designSize: const Size(428, 926),
       minTextAdapt: true,
@@ -50,6 +51,23 @@ class MyApp extends StatelessWidget {
             );
           },
         ),
+=======
+    return BlocProvider(
+      create: (context) => AppCubit(),
+      child: ScreenUtilInit(
+        designSize: const Size(428, 926),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+                // fontFamily: 'Poppins-Bold'
+            ),
+            home: const Loading(),
+          );
+        },
+>>>>>>> origin/main
       ),
     );
   }

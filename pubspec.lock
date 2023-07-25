@@ -81,6 +81,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.1.2"
+<<<<<<< HEAD
   dots_indicator:
     dependency: "direct main"
     description:
@@ -89,6 +90,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
+=======
+>>>>>>> origin/main
   dropdown_button2:
     dependency: "direct main"
     description:
@@ -105,6 +108,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+<<<<<<< HEAD
   easy_localization:
     dependency: "direct main"
     description:
@@ -121,6 +125,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.2"
+=======
+>>>>>>> origin/main
   equatable:
     dependency: transitive
     description:
@@ -205,7 +211,19 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+<<<<<<< HEAD
   intl:
+=======
+  intl_phone_field:
+    dependency: "direct main"
+    description:
+      name: intl_phone_field
+      sha256: "0d2b35d148ed28a454d50797e6c2fb297f0a295feab84641b02d3dd32294b3f3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
+  js:
+>>>>>>> origin/main
     dependency: transitive
     description:
       name: intl
@@ -475,5 +493,10 @@ packages:
     source: hosted
     version: "1.0.0"
 sdks:
+<<<<<<< HEAD
   dart: ">=3.1.0-185.0.dev <4.0.0"
   flutter: ">=3.3.0"
+=======
+  dart: ">=2.19.6 <3.0.0"
+  flutter: ">=3.0.0"
+>>>>>>> origin/main

@@ -1,3 +1,6 @@
+
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +10,6 @@ import '../Widget/customTextField.dart';
 import '../Widget/text.dart';
 import '../Widget/test2.dart';
 import '../const/const.dart';
-import 'Notification.dart';
 import 'login/cubit_login/log_cubit.dart';
 
 class Address extends StatelessWidget {
@@ -96,7 +98,6 @@ class Address extends StatelessWidget {
                                   flex: 4,
                                   child: CustomButton(
                                       color: pink,text: AppText.SingnNext,colorText: Colors.white,width: 286.0,onpress: (){
-                                        Navigator.push(context, MaterialPageRoute(builder: (context) => PageNotification(),));
                                     if(fromKey.currentState!.validate())
                                     {
 
@@ -108,6 +109,8 @@ class Address extends StatelessWidget {
                               ],
                             ),
                             const Spacer(),
+
+
                           ],),
                       ),
                     ],
